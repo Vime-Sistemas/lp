@@ -114,14 +114,13 @@ export default function Produtos() {
               Não encontrou o que procura?
             </h2>
             <p className="text-base md:text-xl text-primary-foreground/80 leading-relaxed">
-              Além de nossos produtos proprietários, somos uma <strong>Software House</strong> completa. 
-              Criamos soluções sob medida para o seu negócio, com a mesma qualidade e design que aplicamos em nossos próprios produtos.
+              Além dos nossos produtos, criamos soluções personalizadas sob medida para o seu negócio — sempre com o mesmo cuidado, qualidade e design que aplicamos internamente.
             </p>
             <div className="pt-4">
               <Link to="/solucoes">
-                <Button variant="secondary" size="lg" className="w-full md:w-auto rounded-full px-8 h-12 text-sm md:text-base">
+                <Button variant="secondary" size="lg" className="w-full md:w-auto rounded-full px-6 py-6 h-auto whitespace-normal text-center leading-tight text-sm md:text-base">
                   Conheça nossas Soluções Personalizadas
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight className="ml-2 h-4 w-4 shrink-0" />
                 </Button>
               </Link>
             </div>
