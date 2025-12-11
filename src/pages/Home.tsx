@@ -158,8 +158,8 @@ export default function Home() {
                </div>
             </div>
             <div>
-              <h3 className="text-xl font-medium mb-2">Aplicativos Mobile</h3>
-              <p className="text-muted-foreground text-sm">Apps modernos para iOS e Android, pensados para o seu público e para o crescimento do seu produto.</p>
+              <h3 className="text-xl font-medium mb-2">{t('home.expertise.mobile')}</h3>
+              <p className="text-muted-foreground text-sm">{t('home.expertise.mobileDesc')}</p>
             </div>
           </motion.div>
 
@@ -180,7 +180,7 @@ export default function Home() {
             </div>
             <div>
               <h3 className="text-xl font-medium mb-2">{t('home.expertise.security')}</h3>
-              <p className="text-muted-foreground text-sm">Proteção completa para seus dados e sistemas, com práticas de segurança atualizadas.</p>
+              <p className="text-muted-foreground text-sm">{t('home.expertise.securityDesc')}</p>
             </div>
           </motion.div>
 
@@ -190,7 +190,7 @@ export default function Home() {
       {/* Minimalist CTA */}
       <section className="py-32 bg-primary text-primary-foreground text-center">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-8">Pronto para o futuro?</h2>
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-8">{t('home.cta.readyForFuture')}</h2>
           <Link to="/contato">
               <Button size="lg" className="rounded-full px-8 h-12 text-base bg-white hover:bg-white text-black font-medium transition-all hover:scale-105">
                 {t('nav.contact')}

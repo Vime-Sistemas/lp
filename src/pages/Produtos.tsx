@@ -2,43 +2,45 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, BarChart3, Briefcase, FileText, Share2, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const products = [
   {
     id: "advisor-sync",
-    title: "AdvisorSync",
-    category: "Planejamento Financeiro",
-    description: "A ferramenta definitiva para planejadores financeiros. Gestão completa de carteira, CRM avançado e análises preditivas em uma única plataforma.",
+    titleKey: "products.advisorSync.title",
+    categoryKey: "products.advisorSync.category",
+    descriptionKey: "products.advisorSync.description",
     icon: <BarChart3 className="w-8 h-8" />,
     highlight: true
   },
   {
     id: "broker-workspace",
-    title: "BrokerWorkspace",
-    category: "Seguros",
-    description: "Gestão inteligente de clientes e apólices. Inclui nossa exclusiva ferramenta de comparativo entre apólices para agilizar o fechamento de contratos.",
+    titleKey: "products.brokerWorkspace.title",
+    categoryKey: "products.brokerWorkspace.category",
+    descriptionKey: "products.brokerWorkspace.description",
     icon: <Briefcase className="w-8 h-8" />,
     highlight: false
   },
   {
     id: "cerebro-financas",
-    title: "Cérebro das Finanças",
-    category: "Finanças Pessoais",
-    description: "Um aplicativo de finanças pessoais que vai além do básico. Controle, planejamento e inteligência financeira para o usuário final.",
+    titleKey: "products.cerebroFinancas.title",
+    categoryKey: "products.cerebroFinancas.category",
+    descriptionKey: "products.cerebroFinancas.description",
     icon: <Sparkles className="w-8 h-8" />,
     highlight: false
   },
   {
     id: "sharepoint",
-    title: "Integrações",
-    category: "Enterprise",
-    description: "Otimizamos fluxos empresariais complexos integrando softwares robustos como SharePoint. Transformamos ferramentas corporativas em soluções ágeis.",
+    titleKey: "products.integrations.title",
+    categoryKey: "products.integrations.category",
+    descriptionKey: "products.integrations.description",
     icon: <Share2 className="w-8 h-8" />,
     highlight: false
   }
 ];
 
 export default function Produtos() {
+  const { t } = useTranslation();
   return (
     <div className="min-h-screen bg-background pt-24 pb-16">
       {/* Hero Section */}
@@ -50,10 +52,10 @@ export default function Produtos() {
           className="max-w-3xl mx-auto"
         >
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-            Nossos Produtos
+            {t('products.title')}
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Ferramentas desenhadas para elevar a produtividade e simplificar o complexo.
+            {t('products.subtitle')}
           </p>
         </motion.div>
       </section>
@@ -78,16 +80,16 @@ export default function Produtos() {
                     {product.icon}
                   </div>
                   <span className="text-[10px] md:text-xs font-medium uppercase tracking-wider text-muted-foreground border px-2 py-1 md:px-3 md:py-1 rounded-full bg-background/50 backdrop-blur-sm">
-                    {product.category}
+                    {t(product.categoryKey)}
                   </span>
                 </div>
                 
                 <div className="mt-auto">
                   <h3 className={`font-semibold tracking-tight mb-3 ${product.highlight ? "text-2xl md:text-4xl" : "text-xl md:text-2xl"}`}>
-                    {product.title}
+                    {t(product.titleKey)}
                   </h3>
                   <p className={`text-muted-foreground leading-relaxed ${product.highlight ? "text-base md:text-lg max-w-2xl" : "text-sm md:text-base"}`}>
-                    {product.description}
+                    {t(product.descriptionKey)}
                   </p>
                 </div>
               </div>
@@ -111,15 +113,15 @@ export default function Produtos() {
           <div className="relative z-10 max-w-3xl mx-auto space-y-6 md:space-y-8">
             <FileText className="w-10 h-10 md:w-12 md:h-12 mx-auto opacity-80" />
             <h2 className="text-2xl md:text-5xl font-bold tracking-tight">
-              Não encontrou o que procura?
+              {t('products.notFound')}
             </h2>
             <p className="text-base md:text-xl text-primary-foreground/80 leading-relaxed">
-              Além dos nossos produtos, criamos soluções personalizadas sob medida para o seu negócio — sempre com o mesmo cuidado, qualidade e design que aplicamos internamente.
+              {t('products.notFoundDesc')}
             </p>
             <div className="pt-4">
               <Link to="/solucoes">
                 <Button variant="secondary" size="lg" className="w-full md:w-auto rounded-full px-6 py-6 h-auto whitespace-normal text-center leading-tight text-sm md:text-base">
-                  Conheça nossas Soluções Personalizadas
+                  {t('products.seeMore')}
                   <ArrowRight className="ml-2 h-4 w-4 shrink-0" />
                 </Button>
               </Link>

@@ -22,18 +22,41 @@
       "frontendDesc": "Responsive and beautiful interfaces that provide exceptional experiences.",
       "backend": "Back-End Development",
       "backendDesc": "Scalable and secure systems.",
-      "mobile": "Mobile Development",
-      "mobileDesc": "Native and cross-platform apps.",
+      "mobile": "Mobile Apps",
+      "mobileDesc": "Modern apps for iOS and Android, designed with your audience and product growth in mind.",
       "security": "Security",
-      "securityDesc": "Maximum focus on security and reliability."
+      "securityDesc": "Complete protection for your data and systems, with up-to-date security practices."
+    },
+    "cta": {
+      "readyForFuture": "Ready for the future?"
     }
   },
   "products": {
     "title": "Our Products",
-    "subtitle": "Proprietary solutions and software house",
+    "subtitle": "Tools designed to increase productivity and simplify the complex.",
     "notFound": "Didn't find what you're looking for?",
-    "notFoundDesc": "In addition to our proprietary products, we are a complete Software House. We create custom solutions for your business with the same quality and design we apply to our own products.",
-    "seeMore": "Explore Our Custom Solutions"
+    "notFoundDesc": "In addition to our products, we create custom solutions tailored to your business — always with the same care, quality and design we apply internally.",
+    "seeMore": "Explore Our Custom Solutions",
+    "advisorSync": {
+      "title": "AdvisorSync",
+      "category": "Financial Planning",
+      "description": "The ultimate tool for financial planners. Complete portfolio management, advanced CRM and predictive analytics in a single platform."
+    },
+    "brokerWorkspace": {
+      "title": "BrokerWorkspace",
+      "category": "Insurance",
+      "description": "Intelligent client and policy management. Includes our exclusive policy comparison tool to speed up contract closing."
+    },
+    "cerebroFinancas": {
+      "title": "Cérebro das Finanças",
+      "category": "Personal Finance",
+      "description": "A personal finance app that goes beyond the basics. Control, planning and financial intelligence for the end user."
+    },
+    "integrations": {
+      "title": "Integrations",
+      "category": "Enterprise",
+      "description": "We optimize complex business workflows by integrating robust software like SharePoint. We transform corporate tools into agile solutions."
+    }
   },
   "solutions": {
     "title": "Our Solutions",

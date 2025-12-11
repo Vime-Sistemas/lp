@@ -22,18 +22,41 @@
       "frontendDesc": "Interfaces responsivas e bonitas que proporcionam experiências excepcionais.",
       "backend": "Back-End Development",
       "backendDesc": "Sistemas escaláveis e seguros.",
-      "mobile": "Mobile Development",
-      "mobileDesc": "Apps nativos e cross-platform.",
+      "mobile": "Aplicativos Mobile",
+      "mobileDesc": "Apps modernos para iOS e Android, pensados para o seu público e para o crescimento do seu produto.",
       "security": "Segurança",
-      "securityDesc": "Foco máximo em segurança e confiabilidade."
+      "securityDesc": "Proteção completa para seus dados e sistemas, com práticas de segurança atualizadas."
+    },
+    "cta": {
+      "readyForFuture": "Pronto para o futuro?"
     }
   },
   "products": {
     "title": "Nossos Produtos",
-    "subtitle": "Soluções proprietárias e software house",
+    "subtitle": "Ferramentas desenhadas para elevar a produtividade e simplificar o complexo.",
     "notFound": "Não encontrou o que procura?",
-    "notFoundDesc": "Além de nossos produtos proprietários, somos uma Software House completa. Criamos soluções sob medida para o seu negócio, com a mesma qualidade e design que aplicamos em nossos próprios produtos.",
-    "seeMore": "Conheça nossas Soluções Personalizadas"
+    "notFoundDesc": "Além dos nossos produtos, criamos soluções personalizadas sob medida para o seu negócio — sempre com o mesmo cuidado, qualidade e design que aplicamos internamente.",
+    "seeMore": "Conheça nossas Soluções Personalizadas",
+    "advisorSync": {
+      "title": "AdvisorSync",
+      "category": "Planejamento Financeiro",
+      "description": "A ferramenta definitiva para planejadores financeiros. Gestão completa de carteira, CRM avançado e análises preditivas em uma única plataforma."
+    },
+    "brokerWorkspace": {
+      "title": "BrokerWorkspace",
+      "category": "Seguros",
+      "description": "Gestão inteligente de clientes e apólices. Inclui nossa exclusiva ferramenta de comparativo entre apólices para agilizar o fechamento de contratos."
+    },
+    "cerebroFinancas": {
+      "title": "Cérebro das Finanças",
+      "category": "Finanças Pessoais",
+      "description": "Um aplicativo de finanças pessoais que vai além do básico. Controle, planejamento e inteligência financeira para o usuário final."
+    },
+    "integrations": {
+      "title": "Integrações",
+      "category": "Enterprise",
+      "description": "Otimizamos fluxos empresariais complexos integrando softwares robustos como SharePoint. Transformamos ferramentas corporativas em soluções ágeis."
+    }
   },
   "solutions": {
     "title": "Nossas Soluções",
