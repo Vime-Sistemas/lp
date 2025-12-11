@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="bg-background border-t py-12 md:py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-12">
           <div className="col-span-2 md:col-span-1">
             <Link to="/" className="text-xl font-bold tracking-tight mb-4 block">
               Vime
@@ -32,20 +32,11 @@ export function Footer() {
               <li><Link to="/solucoes#fractional-cto" className="hover:text-foreground transition-colors">Fractional CTO</Link></li>
             </ul>
           </div>
-
-          <div>
-            <h4 className="font-medium mb-4 text-sm">Legal</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link to="/privacidade" className="hover:text-foreground transition-colors">Privacidade</Link></li>
-              <li><Link to="/termos" className="hover:text-foreground transition-colors">Termos</Link></li>
-            </ul>
-          </div>
         </div>
         
         <div className="pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Vime Sistemas. Todos os direitos reservados.</p>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-foreground transition-colors">Twitter</a>
             <a href="#" className="hover:text-foreground transition-colors">LinkedIn</a>
             <a href="#" className="hover:text-foreground transition-colors">Instagram</a>
           </div>

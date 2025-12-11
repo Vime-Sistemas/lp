@@ -206,9 +206,11 @@ export default function Home() {
       <section className="py-32 bg-primary text-primary-foreground text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-8">Pronto para o futuro?</h2>
-          <Button variant="secondary" size="lg" className="rounded-full px-10 h-14 text-lg">
-            Fale Conosco
-          </Button>
+          <Link to="/contato">
+              <Button size="lg" className="rounded-full px-8 h-12 text-base bg-white hover:bg-white text-black font-medium transition-all hover:scale-105">
+                Contato
+              </Button>
+            </Link>
         </div>
       </section>
     </div>
