@@ -48,29 +48,29 @@ export default function Solucoes() {
           </p>
         </motion.div>
 
-        <div className="space-y-32">
+        <div className="space-y-20 md:space-y-32">
           {solutions.map((solution, index) => (
             <motion.div 
               key={index}
               id={solution.id}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8 }}
-              className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-12 md:gap-24 items-center scroll-mt-24`}
+              className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 md:gap-24 items-center scroll-mt-24`}
             >
-              <div className="flex-1 space-y-6">
-                <div className="w-16 h-16 rounded-2xl bg-secondary flex items-center justify-center mb-6 text-primary">
+              <div className="flex-1 space-y-4 md:space-y-6 w-full">
+                <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-secondary flex items-center justify-center mb-4 md:mb-6 text-primary">
                   {solution.icon}
                 </div>
-                <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">{solution.title}</h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <h2 className="text-2xl md:text-4xl font-semibold tracking-tight">{solution.title}</h2>
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                   {solution.description}
                 </p>
-                <ul className="space-y-3 pt-4">
+                <ul className="space-y-2 md:space-y-3 pt-2 md:pt-4">
                   {solution.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-sm font-medium">
-                      <CheckCircle2 className="w-5 h-5 mr-3 text-primary" />
+                      <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 mr-3 text-primary shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -80,7 +80,7 @@ export default function Solucoes() {
               <div className="flex-1 w-full aspect-square md:aspect-video bg-secondary/30 rounded-3xl border flex items-center justify-center relative overflow-hidden group">
                  {/* Placeholder visual abstrato para cada solução */}
                  <div className="absolute inset-0 bg-gradient-to-br from-transparent to-secondary/50 opacity-50" />
-                 <Code2 className="w-32 h-32 text-secondary-foreground/10 group-hover:scale-110 transition-transform duration-700" />
+                 <Code2 className="w-24 h-24 md:w-32 md:h-32 text-secondary-foreground/10 group-hover:scale-110 transition-transform duration-700" />
               </div>
             </motion.div>
           ))}

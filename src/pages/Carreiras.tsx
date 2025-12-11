@@ -65,11 +65,13 @@ export default function Carreiras() {
 
       {/* Vagas */}
       <section className="container mx-auto px-4 max-w-4xl">
+        <h2 className="text-2xl md:text-3xl font-bold mb-8 md:mb-12 text-center">Vagas Abertas</h2>
         <div className="space-y-4">  
           <div className="mt-12 p-8 rounded-3xl bg-secondary/20 text-center">
-            <h3 className="text-lg font-medium mb-2">Estamos sempre procurando talentos excepcionais.</h3>
+            <h3 className="text-lg font-medium mb-2">Não encontrou sua vaga?</h3>
+            <p className="text-muted-foreground mb-6">Estamos sempre procurando talentos excepcionais.</p>
             <Link to="/contato">
-              <Button variant="outline" className="rounded-full">
+              <Button variant="outline" className="rounded-full w-full md:w-auto">
                 Envie seu Currículo
               </Button>
             </Link>

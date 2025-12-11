@@ -60,7 +60,7 @@ export default function Produtos() {
 
       {/* Products Grid */}
       <section className="container mx-auto px-4 mb-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {products.map((product, index) => (
             <motion.div
               key={product.id}
@@ -68,25 +68,25 @@ export default function Produtos() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`group relative overflow-hidden rounded-3xl border bg-card p-8 md:p-12 flex flex-col justify-between ${
+              className={`group relative overflow-hidden rounded-3xl border bg-card p-6 md:p-12 flex flex-col justify-between ${
                 product.highlight ? "md:col-span-2 bg-secondary/30" : ""
               }`}
             >
               <div className="relative z-10 flex flex-col h-full">
-                <div className="mb-8 flex items-center justify-between">
+                <div className="mb-6 md:mb-8 flex items-center justify-between">
                   <div className="p-3 bg-background rounded-xl border shadow-sm">
                     {product.icon}
                   </div>
-                  <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground border px-3 py-1 rounded-full">
+                  <span className="text-[10px] md:text-xs font-medium uppercase tracking-wider text-muted-foreground border px-2 py-1 md:px-3 md:py-1 rounded-full bg-background/50 backdrop-blur-sm">
                     {product.category}
                   </span>
                 </div>
                 
                 <div className="mt-auto">
-                  <h3 className={`font-semibold tracking-tight mb-3 ${product.highlight ? "text-3xl md:text-4xl" : "text-2xl"}`}>
+                  <h3 className={`font-semibold tracking-tight mb-3 ${product.highlight ? "text-2xl md:text-4xl" : "text-xl md:text-2xl"}`}>
                     {product.title}
                   </h3>
-                  <p className={`text-muted-foreground leading-relaxed ${product.highlight ? "text-lg max-w-2xl" : "text-base"}`}>
+                  <p className={`text-muted-foreground leading-relaxed ${product.highlight ? "text-base md:text-lg max-w-2xl" : "text-sm md:text-base"}`}>
                     {product.description}
                   </p>
                 </div>
@@ -108,18 +108,18 @@ export default function Produtos() {
           transition={{ duration: 0.5 }}
           className="rounded-3xl bg-primary text-primary-foreground p-8 md:p-16 text-center relative overflow-hidden"
         >
-          <div className="relative z-10 max-w-3xl mx-auto space-y-8">
-            <FileText className="w-12 h-12 mx-auto opacity-80" />
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+          <div className="relative z-10 max-w-3xl mx-auto space-y-6 md:space-y-8">
+            <FileText className="w-10 h-10 md:w-12 md:h-12 mx-auto opacity-80" />
+            <h2 className="text-2xl md:text-5xl font-bold tracking-tight">
               Não encontrou o que procura?
             </h2>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
+            <p className="text-base md:text-xl text-primary-foreground/80 leading-relaxed">
               Além de nossos produtos proprietários, somos uma <strong>Software House</strong> completa. 
               Criamos soluções sob medida para o seu negócio, com a mesma qualidade e design que aplicamos em nossos próprios produtos.
             </p>
             <div className="pt-4">
               <Link to="/solucoes">
-                <Button variant="secondary" size="lg" className="rounded-full px-8 h-12 text-base">
+                <Button variant="secondary" size="lg" className="w-full md:w-auto rounded-full px-8 h-12 text-sm md:text-base">
                   Conheça nossas Soluções Personalizadas
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>

@@ -6,7 +6,7 @@ export default function Contato() {
   return (
     <div className="min-h-screen bg-background pt-24 pb-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 max-w-6xl mx-auto">
           
           {/* Info Column */}
           <motion.div
@@ -14,21 +14,21 @@ export default function Contato() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+            <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 md:mb-6">
               Vamos conversar?
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed mb-12">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 md:mb-12">
               Tem um projeto em mente ou quer saber mais sobre nossos produtos? Estamos prontos para ouvir você.
             </p>
 
-            <div className="space-y-8">
+            <div className="space-y-6 md:space-y-8">
               <div className="flex items-start space-x-4">
                 <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center shrink-0">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
                   <h3 className="font-medium mb-1">Email</h3>
-                  <p className="text-muted-foreground">contato@vimesistemas.com</p>
+                  <p className="text-muted-foreground text-sm md:text-base">contato@vimesistemas.com</p>
                 </div>
               </div>
               
@@ -38,8 +38,8 @@ export default function Contato() {
                 </div>
                 <div>
                   <h3 className="font-medium mb-1">Localização</h3>
-                  <p className="text-muted-foreground">Belo Horizonte, MG - Brasil</p>
-                  <p className="text-sm text-muted-foreground mt-1">(Atendemos globalmente)</p>
+                  <p className="text-muted-foreground text-sm md:text-base">Belo Horizonte, MG - Brasil</p>
+                  <p className="text-xs md:text-sm text-muted-foreground mt-1">(Atendemos globalmente)</p>
                 </div>
               </div>
 
@@ -49,7 +49,7 @@ export default function Contato() {
                 </div>
                 <div>
                   <h3 className="font-medium mb-1">Redes Sociais</h3>
-                  <div className="flex gap-4 text-muted-foreground">
+                  <div className="flex gap-4 text-muted-foreground text-sm md:text-base">
                     <a href="#" className="hover:text-foreground transition-colors">LinkedIn</a>
                     <a href="#" className="hover:text-foreground transition-colors">Instagram</a>
                   </div>
@@ -63,10 +63,10 @@ export default function Contato() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-card border rounded-3xl p-8 md:p-10 shadow-sm"
+            className="bg-card border rounded-3xl p-6 md:p-10 shadow-sm"
           >
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <form className="space-y-4 md:space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
                     Nome
@@ -74,7 +74,7 @@ export default function Contato() {
                   <input
                     type="text"
                     id="name"
-                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="flex h-10 md:h-12 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     placeholder="Seu nome"
                   />
                 </div>
@@ -85,7 +85,7 @@ export default function Contato() {
                   <input
                     type="email"
                     id="email"
-                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="flex h-10 md:h-12 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     placeholder="seu@email.com"
                   />
                 </div>
@@ -97,7 +97,7 @@ export default function Contato() {
                 </label>
                 <select
                   id="subject"
-                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="flex h-10 md:h-12 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   <option value="">Selecione um assunto</option>
                   <option value="projeto">Novo Projeto</option>
