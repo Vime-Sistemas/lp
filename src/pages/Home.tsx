@@ -78,10 +78,10 @@ export default function Home() {
       </AnimatePresence>
 
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center min-h-[85vh] text-center px-4 relative overflow-hidden">
+      <section className="flex flex-col items-center justify-center min-h-[85vh] text-center px-4 relative overflow-hidden w-full">
         {/* Background orb */}
         <motion.div 
-          className="hero-orb absolute top-1/2 left-1/2"
+          className="hero-orb absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={showContent ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 1.5, delay: 0.2 }}
@@ -89,18 +89,18 @@ export default function Home() {
         
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-100 via-background to-background opacity-50" />
         
-        <div className="space-y-6 max-w-4xl mx-auto hero-perspective">
+        <div className="space-y-6 max-w-4xl mx-auto" style={{ perspective: "1000px" }}>
           {/* Título principal com animação de reveal dramática */}
           <div className="overflow-hidden">
             <motion.h1 
-              initial={{ opacity: 0, y: 100, rotateX: -80 }}
-              animate={showContent ? { opacity: 1, y: 0, rotateX: 0 } : {}}
+              initial={{ opacity: 0, y: 100 }}
+              animate={showContent ? { opacity: 1, y: 0 } : {}}
               transition={{ 
                 duration: 1.2, 
                 ease: [0.16, 1, 0.3, 1],
                 delay: 0.1 
               }}
-              className="text-4xl sm:text-5xl md:text-8xl font-semibold tracking-tighter text-primary bg-clip-text text-transparent bg-gradient-to-b from-neutral-950 via-neutral-800 to-neutral-600 pb-2 hero-gradient-text"
+              className="text-4xl sm:text-5xl md:text-8xl font-semibold tracking-tighter text-primary bg-clip-text text-transparent bg-gradient-to-b from-neutral-950 via-neutral-800 to-neutral-600 pb-2 hero-gradient-text w-full"
               style={{
                 backgroundSize: '200% 200%',
               }}
@@ -147,7 +147,7 @@ export default function Home() {
               ease: [0.16, 1, 0.3, 1], 
               delay: 1 
             }}
-            className="pt-8 flex justify-center gap-4"
+            className="pt-8 flex flex-col sm:flex-row justify-center gap-4 w-full px-2"
           >
             <Link to="/solucoes">
               <motion.div
@@ -156,7 +156,7 @@ export default function Home() {
               >
                 <Button 
                   size="lg" 
-                  className="rounded-full px-8 h-12 text-base font-medium hero-button-shimmer hero-cta-pulse relative overflow-hidden"
+                  className="rounded-full px-6 sm:px-8 h-12 text-base font-medium hero-button-shimmer hero-cta-pulse relative overflow-hidden whitespace-nowrap"
                 >
                   {t('home.hero.ctaSolutions')}
                 </Button>
@@ -170,7 +170,7 @@ export default function Home() {
                 <Button 
                   variant="ghost" 
                   size="lg" 
-                  className="rounded-full px-8 h-12 text-base font-medium group hover:bg-secondary/50"
+                  className="rounded-full px-6 sm:px-8 h-12 text-base font-medium group hover:bg-secondary/50 whitespace-nowrap"
                 >
                   {t('home.hero.ctaLearnMore')} 
                   <motion.span
