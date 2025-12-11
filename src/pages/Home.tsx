@@ -19,7 +19,7 @@ export default function Home() {
               ease: [0.16, 1, 0.3, 1],
               delay: 0.2 
             }}
-            className="text-6xl md:text-8xl font-semibold tracking-tighter text-primary bg-clip-text text-transparent bg-gradient-to-b from-neutral-950 via-neutral-800 to-neutral-600 pb-2"
+            className="text-4xl sm:text-5xl md:text-8xl font-semibold tracking-tighter text-primary bg-clip-text text-transparent bg-gradient-to-b from-neutral-950 via-neutral-800 to-neutral-600 pb-2"
           >
             Vime Sistemas
           </motion.h1>
@@ -32,11 +32,11 @@ export default function Home() {
               ease: [0.16, 1, 0.3, 1], 
               delay: 0.4 
             }}
-            className="text-xl md:text-3xl text-muted-foreground font-light tracking-tight max-w-2xl mx-auto leading-relaxed"
+            className="text-lg sm:text-xl md:text-3xl text-muted-foreground font-light tracking-tight max-w-2xl mx-auto leading-relaxed px-4"
           >
             Transformamos a sua necessidade
-            <br />
-            em solução tecnológica.
+            <br className="hidden md:block" />
+            {" "}em solução tecnológica.
           </motion.p>
           
           <motion.div 
@@ -64,19 +64,23 @@ export default function Home() {
       </section>
 
       {/* Bento Grid Section */}
-      <section className="container mx-auto px-4 py-24">
+      <section className="container mx-auto px-4 py-12 md:py-24">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16 text-center"
+          className="mb-12 md:mb-16 text-center"
         >
-          <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mb-4">Expertise Técnica</h2>
-          <p className="text-muted-foreground text-lg">Soluções completas para desafios complexos.</p>
+          <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mb-4">
+            Como podemos ajudar no seu negócio
+          </h2>
+          <p className="text-muted-foreground text-lg">
+            Tecnologia bem feita, simples de usar e alinhada aos seus objetivos.
+          </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-6 auto-rows-[300px]">
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-6 auto-rows-auto md:auto-rows-[300px]">
           
           {/* AI Development - Coluna 1 e 2 (2/6) */}
           <motion.div 
@@ -84,7 +88,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="md:col-span-2 rounded-3xl border bg-card p-8 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group overflow-hidden relative"
+            className="md:col-span-2 rounded-3xl border bg-card p-8 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group overflow-hidden relative min-h-[300px]"
           >
             <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
               <Zap className="w-32 h-32" />
@@ -98,7 +102,9 @@ export default function Home() {
             </div>
             <div>
               <h3 className="text-xl font-medium mb-2">Integrações</h3>
-              <p className="text-muted-foreground text-sm">Soluções de integrações que mudam o nível.</p>
+              <p className="text-muted-foreground text-sm">
+                Conectamos sistemas e simplificamos processos para que tudo funcione de forma fluida no seu dia a dia.
+              </p>
             </div>
           </motion.div>
 
@@ -108,7 +114,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="md:col-span-4 rounded-3xl border bg-card p-8 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group overflow-hidden relative"
+            className="md:col-span-4 rounded-3xl border bg-card p-8 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group overflow-hidden relative min-h-[300px]"
           >
              <div className="absolute -right-10 top-10 opacity-5 group-hover:opacity-10 transition-opacity">
               <Layers className="w-64 h-64" />
@@ -132,29 +138,8 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <h3 className="text-xl font-medium mb-2">Front-End Development</h3>
-              <p className="text-muted-foreground text-sm">Interfaces responsivas e bonitas que proporcionam experiências excepcionais.</p>
-            </div>
-          </motion.div>
-
-          {/* Back-End Development - Coluna 1 e 2 (2/6) */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="md:col-span-2 rounded-3xl border bg-card p-8 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group"
-          >
-            <div className="flex items-center justify-center flex-1 mb-4">
-               <div className="relative space-y-[-1.5rem] transform group-hover:space-y-[-1rem] transition-all duration-500">
-                  <div className="w-24 h-12 bg-secondary border rounded-lg shadow-sm z-10 relative flex items-center justify-center"><div className="w-1 h-1 bg-primary/20 rounded-full mx-1"></div></div>
-                  <div className="w-24 h-12 bg-secondary/80 border rounded-lg shadow-sm z-20 relative flex items-center justify-center"><div className="w-1 h-1 bg-primary/20 rounded-full mx-1"></div></div>
-                  <div className="w-24 h-12 bg-background border rounded-lg shadow-sm z-30 relative flex items-center justify-center"><div className="w-1 h-1 bg-primary rounded-full mx-1"></div></div>
-               </div>
-            </div>
-            <div>
-              <h3 className="text-xl font-medium mb-2">Back-End Development</h3>
-              <p className="text-muted-foreground text-sm">Sistemas escaláveis e seguros.</p>
+              <h3 className="text-xl font-medium mb-2">Sistemas Web</h3>
+              <p className="text-muted-foreground text-sm">Criamos plataformas e ferramentas online sob medida, feitas para serem rápidas e fáceis de usar.</p>
             </div>
           </motion.div>
 
@@ -164,7 +149,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="md:col-span-2 rounded-3xl border bg-card p-8 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group"
+            className="md:col-span-2 rounded-3xl border bg-card p-8 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group min-h-[300px]"
           >
             <div className="flex items-center justify-center flex-1 mb-4">
                <div className="w-20 h-32 border-4 border-secondary rounded-2xl relative bg-background flex flex-col items-center pt-2 transform group-hover:rotate-3 transition-transform duration-500">
@@ -173,8 +158,8 @@ export default function Home() {
                </div>
             </div>
             <div>
-              <h3 className="text-xl font-medium mb-2">Mobile Development</h3>
-              <p className="text-muted-foreground text-sm">Apps nativos e cross-platform.</p>
+              <h3 className="text-xl font-medium mb-2">Aplicativos Mobile</h3>
+              <p className="text-muted-foreground text-sm">Apps modernos para iOS e Android, pensados para o seu público e para o crescimento do seu produto.</p>
             </div>
           </motion.div>
 
@@ -184,7 +169,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="md:col-span-2 rounded-3xl border bg-card p-8 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group"
+            className="md:col-span-2 rounded-3xl border bg-card p-8 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group min-h-[300px]"
           >
             <div className="flex items-center justify-center flex-1 mb-4">
                <div className="relative flex items-center justify-center">
@@ -195,7 +180,7 @@ export default function Home() {
             </div>
             <div>
               <h3 className="text-xl font-medium mb-2">Segurança</h3>
-              <p className="text-muted-foreground text-sm">Foco máximo em segurança e confiabilidade.</p>
+              <p className="text-muted-foreground text-sm">Proteção completa para seus dados e sistemas, com práticas de segurança atualizadas.</p>
             </div>
           </motion.div>
 

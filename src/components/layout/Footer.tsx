@@ -22,16 +22,6 @@ export function Footer() {
               <li><Link to="/contato" className="hover:text-foreground transition-colors">Contato</Link></li>
             </ul>
           </div>
-
-          <div>
-            <h4 className="font-medium mb-4 text-sm">Soluções</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link to="/solucoes#ai-development" className="hover:text-foreground transition-colors">AI Development</Link></li>
-              <li><Link to="/solucoes#web-development" className="hover:text-foreground transition-colors">Web Development</Link></li>
-              <li><Link to="/solucoes#mobile-development" className="hover:text-foreground transition-colors">Mobile Development</Link></li>
-              <li><Link to="/solucoes#fractional-cto" className="hover:text-foreground transition-colors">Fractional CTO</Link></li>
-            </ul>
-          </div>
         </div>
         
         <div className="pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
