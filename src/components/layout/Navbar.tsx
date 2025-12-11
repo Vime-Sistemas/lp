@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -13,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
 
 export function Navbar() {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
@@ -34,10 +36,10 @@ export function Navbar() {
   }, [isOpen]);
 
   const navLinks = [
-    { href: "/produtos", label: "Produtos" },
-    { href: "/solucoes", label: "Soluções" },
-    { href: "/carreiras", label: "Carreiras" },
-    { href: "/contato", label: "Contato" },
+    { href: "/produtos", label: t('nav.products') },
+    { href: "/solucoes", label: t('nav.solutions') },
+    { href: "/carreiras", label: t('nav.careers') },
+    { href: "/contato", label: t('nav.contact') },
   ];
 
   return (
@@ -116,7 +118,7 @@ export function Navbar() {
                 <div className="h-px w-full bg-border" />
                 <Link to="/contato" className="block">
                   <Button className="w-full rounded-full h-14 text-lg font-medium" size="lg">
-                    Iniciar Projeto <ArrowRight className="ml-2 w-5 h-5" />
+                    {t('nav.startProject')} <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </Link>
               </motion.div>

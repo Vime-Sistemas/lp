@@ -14,8 +14,8 @@
       "ctaLearnMore": "Learn more"
     },
     "expertise": {
-      "title": "Technical Expertise",
-      "subtitle": "Complete solutions for complex challenges.",
+      "title": "How we can help your business",
+      "subtitle": "Well-made technology, simple to use and aligned with your goals.",
       "integrations": "Integrations",
       "integrationsDesc": "Integration solutions that change the game.",
       "frontend": "Front-End Development",
@@ -27,6 +27,53 @@
       "security": "Security",
       "securityDesc": "Maximum focus on security and reliability."
     }
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Proprietary solutions and software house",
+    "notFound": "Didn't find what you're looking for?",
+    "notFoundDesc": "In addition to our proprietary products, we are a complete Software House. We create custom solutions for your business with the same quality and design we apply to our own products.",
+    "seeMore": "Explore Our Custom Solutions"
+  },
+  "solutions": {
+    "title": "Our Solutions",
+    "subtitle": "We combine world-class design with cutting-edge engineering to deliver software that defines the market.",
+    "aiDevelopment": "AI Development",
+    "webDevelopment": "Web Development",
+    "mobileDevelopment": "Mobile Development",
+    "fractionalCto": "Fractional CTO"
+  },
+  "careers": {
+    "title": "Careers",
+    "subtitle": "Join our team",
+    "benefits": "Why work with us?",
+    "openPositions": "Open Positions",
+    "notFound": "Didn't find?"
+  },
+  "contact": {
+    "title": "Let's talk?",
+    "subtitle": "Have a project in mind or want to learn more about our products? We're ready to listen to you.",
+    "email": "Email",
+    "location": "Location",
+    "socials": "Social Networks",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "newProject": "New Project",
+      "productQuestion": "Product Question",
+      "careers": "Careers / Jobs",
+      "other": "Other"
+    }
+  },
+  "footer": {
+    "company": "Company",
+    "solutions": "Solutions",
+    "careers": "Careers",
+    "contact": "Contact",
+    "rightReserved": "All rights reserved"
   },
   "cookieAlert": {
     "message": "We use cookies to improve your experience. By continuing to browse, you agree to our privacy policy.",

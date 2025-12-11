@@ -2,8 +2,10 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Layers, Zap, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground">
       {/* Hero Section */}
@@ -21,7 +23,7 @@ export default function Home() {
             }}
             className="text-4xl sm:text-5xl md:text-8xl font-semibold tracking-tighter text-primary bg-clip-text text-transparent bg-gradient-to-b from-neutral-950 via-neutral-800 to-neutral-600 pb-2"
           >
-            Vime Sistemas
+            {t('home.hero.title')}
           </motion.h1>
           
           <motion.p 
@@ -34,9 +36,7 @@ export default function Home() {
             }}
             className="text-lg sm:text-xl md:text-3xl text-muted-foreground font-light tracking-tight max-w-2xl mx-auto leading-relaxed px-4"
           >
-            Transformamos a sua necessidade
-            <br className="hidden md:block" />
-            {" "}em solução tecnológica.
+            {t('home.hero.subtitle')}
           </motion.p>
           
           <motion.div 
@@ -51,12 +51,12 @@ export default function Home() {
           >
             <Link to="/solucoes">
               <Button size="lg" className="rounded-full px-8 h-12 text-base font-medium transition-all hover:scale-105">
-                Nossas Soluções
+                {t('home.hero.ctaSolutions')}
               </Button>
             </Link>
             <Link to="/produtos">
               <Button variant="ghost" size="lg" className="rounded-full px-8 h-12 text-base font-medium group hover:bg-secondary/50">
-                Saiba mais <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                {t('home.hero.ctaLearnMore')} <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
           </motion.div>
@@ -73,10 +73,10 @@ export default function Home() {
           className="mb-12 md:mb-16 text-center"
         >
           <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mb-4">
-            Como podemos ajudar no seu negócio
+            {t('home.expertise.title')}
           </h2>
           <p className="text-muted-foreground text-lg">
-            Tecnologia bem feita, simples de usar e alinhada aos seus objetivos.
+            {t('home.expertise.subtitle')}
           </p>
         </motion.div>
 
@@ -101,7 +101,7 @@ export default function Home() {
                </div>
             </div>
             <div>
-              <h3 className="text-xl font-medium mb-2">Integrações</h3>
+              <h3 className="text-xl font-medium mb-2">{t('home.expertise.integrations')}</h3>
               <p className="text-muted-foreground text-sm">
                 Conectamos sistemas e simplificamos processos para que tudo funcione de forma fluida no seu dia a dia.
               </p>
@@ -138,8 +138,8 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <h3 className="text-xl font-medium mb-2">Sistemas Web</h3>
-              <p className="text-muted-foreground text-sm">Criamos plataformas e ferramentas online sob medida, feitas para serem rápidas e fáceis de usar.</p>
+              <h3 className="text-xl font-medium mb-2">{t('home.expertise.frontend')}</h3>
+              <p className="text-muted-foreground text-sm">{t('home.expertise.frontendDesc')}</p>
             </div>
           </motion.div>
 
@@ -179,7 +179,7 @@ export default function Home() {
                </div>
             </div>
             <div>
-              <h3 className="text-xl font-medium mb-2">Segurança</h3>
+              <h3 className="text-xl font-medium mb-2">{t('home.expertise.security')}</h3>
               <p className="text-muted-foreground text-sm">Proteção completa para seus dados e sistemas, com práticas de segurança atualizadas.</p>
             </div>
           </motion.div>
@@ -193,7 +193,7 @@ export default function Home() {
           <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-8">Pronto para o futuro?</h2>
           <Link to="/contato">
               <Button size="lg" className="rounded-full px-8 h-12 text-base bg-white hover:bg-white text-black font-medium transition-all hover:scale-105">
-                Contato
+                {t('nav.contact')}
               </Button>
             </Link>
         </div>

@@ -14,8 +14,8 @@
       "ctaLearnMore": "Saiba mais"
     },
     "expertise": {
-      "title": "Expertise Técnica",
-      "subtitle": "Soluções completas para desafios complexos.",
+      "title": "Como podemos ajudar no seu negócio",
+      "subtitle": "Tecnologia bem feita, simples de usar e alinhada aos seus objetivos.",
       "integrations": "Integrações",
       "integrationsDesc": "Soluções de integrações que mudam o nível.",
       "frontend": "Front-End Development",
@@ -27,6 +27,53 @@
       "security": "Segurança",
       "securityDesc": "Foco máximo em segurança e confiabilidade."
     }
+  },
+  "products": {
+    "title": "Nossos Produtos",
+    "subtitle": "Soluções proprietárias e software house",
+    "notFound": "Não encontrou o que procura?",
+    "notFoundDesc": "Além de nossos produtos proprietários, somos uma Software House completa. Criamos soluções sob medida para o seu negócio, com a mesma qualidade e design que aplicamos em nossos próprios produtos.",
+    "seeMore": "Conheça nossas Soluções Personalizadas"
+  },
+  "solutions": {
+    "title": "Nossas Soluções",
+    "subtitle": "Combinamos design de classe mundial com engenharia de ponta para entregar software que define o mercado.",
+    "aiDevelopment": "AI Development",
+    "webDevelopment": "Web Development",
+    "mobileDevelopment": "Mobile Development",
+    "fractionalCto": "Fractional CTO"
+  },
+  "careers": {
+    "title": "Carreiras",
+    "subtitle": "Junte-se ao nosso time",
+    "benefits": "Por que trabalhar conosco?",
+    "openPositions": "Vagas Abertas",
+    "notFound": "Não encontrou?"
+  },
+  "contact": {
+    "title": "Vamos conversar?",
+    "subtitle": "Tem um projeto em mente ou quer saber mais sobre nossos produtos? Estamos prontos para ouvir você.",
+    "email": "Email",
+    "location": "Localização",
+    "socials": "Redes Sociais",
+    "form": {
+      "name": "Nome",
+      "email": "Email",
+      "subject": "Assunto",
+      "message": "Mensagem",
+      "submit": "Enviar Mensagem",
+      "newProject": "Novo Projeto",
+      "productQuestion": "Dúvida sobre Produtos",
+      "careers": "Carreiras / Vagas",
+      "other": "Outro"
+    }
+  },
+  "footer": {
+    "company": "Empresa",
+    "solutions": "Soluções",
+    "careers": "Carreiras",
+    "contact": "Contato",
+    "rightReserved": "Todos os direitos reservados"
   },
   "cookieAlert": {
     "message": "Nós usamos cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa política de privacidade.",
