@@ -10,6 +10,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
+import { LanguageSwitcher } from "@/components/ui/language-switcher";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -65,14 +66,18 @@ export function Navbar() {
           </NavigationMenu>
         </div>
 
-        {/* Mobile Menu Toggle */}
-        <button 
-          className="md:hidden ml-auto z-50 relative p-2 -mr-2 text-foreground"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
-        >
-          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+        {/* Language Switcher & Mobile Toggle */}
+        <div className="ml-auto flex items-center gap-2 z-50">
+          <LanguageSwitcher />
+          
+          <button 
+            className="md:hidden relative p-2 -mr-2 text-foreground"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
 
         {/* Mobile Navigation Overlay */}
         <AnimatePresence>

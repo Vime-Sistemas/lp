@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "products": "Produtos",
+    "solutions": "Soluções",
+    "careers": "Carreiras",
+    "contact": "Contato",
+    "startProject": "Iniciar Projeto"
+  },
+  "home": {
+    "hero": {
+      "title": "Vime Sistemas",
+      "subtitle": "Transformamos a sua necessidade em solução tecnológica.",
+      "ctaSolutions": "Nossas Soluções",
+      "ctaLearnMore": "Saiba mais"
+    },
+    "expertise": {
+      "title": "Expertise Técnica",
+      "subtitle": "Soluções completas para desafios complexos.",
+      "integrations": "Integrações",
+      "integrationsDesc": "Soluções de integrações que mudam o nível.",
+      "frontend": "Front-End Development",
+      "frontendDesc": "Interfaces responsivas e bonitas que proporcionam experiências excepcionais.",
+      "backend": "Back-End Development",
+      "backendDesc": "Sistemas escaláveis e seguros.",
+      "mobile": "Mobile Development",
+      "mobileDesc": "Apps nativos e cross-platform.",
+      "security": "Segurança",
+      "securityDesc": "Foco máximo em segurança e confiabilidade."
+    }
+  },
+  "cookieAlert": {
+    "message": "Nós usamos cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa política de privacidade.",
+    "accept": "Aceitar",
+    "decline": "Recusar"
+  }
+}

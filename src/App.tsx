@@ -7,6 +7,8 @@ import Produtos from './pages/Produtos';
 import Carreiras from './pages/Carreiras';
 import Contato from './pages/Contato';
 
+import { CookieAlert } from './components/ui/cookie-alert';
+
 function App() {
   return (
     <Router>
@@ -22,6 +24,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <CookieAlert />
       </div>
     </Router>
   );
