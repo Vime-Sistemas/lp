@@ -1,45 +1,47 @@
 import { motion } from "framer-motion";
 import { CheckCircle2, Globe, Smartphone, CloudCheck } from "lucide-react";
-
-const solutions = [
-  {
-    id: "web-development",
-    title: "Aplicações Web",
-    description: "Criamos aplicações web modernas e eficientes, focadas em alta performance, segurança e escalabilidade. Soluções pensadas para crescer junto com o seu negócio.",
-    icon: <Globe className="w-10 h-10" />,
-    features: [
-        "Sistemas e serviços online sob medida",
-        "Arquitetura escalável para acompanhar seu crescimento",
-        "Alta disponibilidade e confiabilidade",
-        "Segurança reforçada em todas as camadas"
-    ]
-  },
-  {
-    id: "mobile-development",
-    title: "Aplicações Mobile",
-    description: "Desenvolvemos aplicativos modernos e intuitivos para iOS e Android, com foco em experiência do usuário, design de alta qualidade e desempenho impecável.",
-    icon: <Smartphone className="w-10 h-10" />,
-    features: [
-        "Apps para iOS e Android",
-        "Desenvolvimento nativo ou híbrido",
-        "Experiência e interface de alta qualidade",
-        "Integração com serviços e sistemas existentes"
-    ]
-  },
-  {
-    id: "integracoes",
-    title: "Integrações",
-    description: "Conectamos sistemas e plataformas para tornar seus processos mais simples, rápidos e eficientes. Integramos ferramentas corporativas, como SharePoint, e transformamos fluxos complexos em soluções ágeis e bem estruturadas.",
-    icon: <CloudCheck className="w-10 h-10" />,
-    features: [
-        "Planejamento e estratégia tecnológica",
-        "Apoio e mentoria para equipes internas",
-        "Mapeamento e otimização de processos"
-    ]
-  }
-];
+import { useTranslation } from "react-i18next";
 
 export default function Solucoes() {
+  const { t } = useTranslation();
+
+  const solutions = [
+    {
+      id: "web-development",
+      titleKey: "solutions.webApplication.title",
+      descriptionKey: "solutions.webApplication.description",
+      icon: <Globe className="w-10 h-10" />,
+      featuresKeys: [
+        "solutions.webApplication.feature1",
+        "solutions.webApplication.feature2",
+        "solutions.webApplication.feature3",
+        "solutions.webApplication.feature4"
+      ]
+    },
+    {
+      id: "mobile-development",
+      titleKey: "solutions.mobileApplication.title",
+      descriptionKey: "solutions.mobileApplication.description",
+      icon: <Smartphone className="w-10 h-10" />,
+      featuresKeys: [
+        "solutions.mobileApplication.feature1",
+        "solutions.mobileApplication.feature2",
+        "solutions.mobileApplication.feature3",
+        "solutions.mobileApplication.feature4"
+      ]
+    },
+    {
+      id: "integracoes",
+      titleKey: "solutions.integrations.title",
+      descriptionKey: "solutions.integrations.description",
+      icon: <CloudCheck className="w-10 h-10" />,
+      featuresKeys: [
+        "solutions.integrations.feature1",
+        "solutions.integrations.feature2",
+        "solutions.integrations.feature3"
+      ]
+    }
+  ];
   return (
     <div className="min-h-screen bg-background pt-24 pb-16">
       <div className="container mx-auto px-4">
@@ -49,9 +51,9 @@ export default function Solucoes() {
           transition={{ duration: 0.6 }}
           className="max-w-3xl mx-auto text-center mb-24"
         >
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">Nossas Soluções</h1>
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">{t('solutions.title')}</h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Combinamos design de classe mundial com engenharia de ponta para entregar software que define o mercado.
+            {t('solutions.subtitle')}
           </p>
         </motion.div>
 
@@ -81,15 +83,15 @@ export default function Solucoes() {
 
               {/* Content Body */}
               <div className="p-6 md:p-8 flex-1 flex flex-col">
-                <h2 className="text-2xl font-semibold tracking-tight mb-3">{solution.title}</h2>
+                <h2 className="text-2xl font-semibold tracking-tight mb-3">{t(solution.titleKey)}</h2>
                 <p className="text-muted-foreground leading-relaxed mb-6 flex-1">
-                  {solution.description}
+                  {t(solution.descriptionKey)}
                 </p>
                 <ul className="space-y-2 pt-4 border-t">
-                  {solution.features.map((feature, idx) => (
+                  {solution.featuresKeys.map((featureKey, idx) => (
                     <li key={idx} className="flex items-center text-sm font-medium text-muted-foreground">
                       <CheckCircle2 className="w-4 h-4 mr-2 text-primary shrink-0" />
-                      {feature}
+                      {t(featureKey)}
                     </li>
                   ))}
                 </ul>

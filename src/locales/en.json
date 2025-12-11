@@ -61,33 +61,73 @@
   "solutions": {
     "title": "Our Solutions",
     "subtitle": "We combine world-class design with cutting-edge engineering to deliver software that defines the market.",
-    "aiDevelopment": "AI Development",
-    "webDevelopment": "Web Development",
-    "mobileDevelopment": "Mobile Development",
-    "fractionalCto": "Fractional CTO"
+    "webApplication": {
+      "title": "Web Applications",
+      "description": "We create modern and efficient web applications, focused on high performance, security and scalability. Solutions designed to grow with your business.",
+      "feature1": "Custom online systems and services",
+      "feature2": "Scalable architecture to support your growth",
+      "feature3": "High availability and reliability",
+      "feature4": "Enhanced security across all layers"
+    },
+    "mobileApplication": {
+      "title": "Mobile Applications",
+      "description": "We develop modern and intuitive applications for iOS and Android, focused on user experience, high-quality design and impeccable performance.",
+      "feature1": "Apps for iOS and Android",
+      "feature2": "Native or hybrid development",
+      "feature3": "High-quality experience and interface",
+      "feature4": "Integration with existing services and systems"
+    },
+    "integrations": {
+      "title": "Integrations",
+      "description": "We connect systems and platforms to make your processes simpler, faster and more efficient. We integrate corporate tools such as SharePoint, transforming complex workflows into agile and well-structured solutions.",
+      "feature1": "Technology planning and strategy",
+      "feature2": "Support and mentoring for internal teams",
+      "feature3": "Process mapping and optimization"
+    }
   },
   "careers": {
-    "title": "Careers",
-    "subtitle": "Join our team",
+    "title": "Join Vime",
+    "subtitle": "We are building the future of software. If you're passionate about creating exceptional products, your place is here.",
     "benefits": "Why work with us?",
     "openPositions": "Open Positions",
-    "notFound": "Didn't find?"
+    "notFound": "Didn't find your job?",
+    "notFoundDesc": "We are always looking for exceptional talents.",
+    "sendResume": "Send Your Resume",
+    "benefit1": {
+      "title": "Cutting-Edge Technology",
+      "description": "Work with the most modern tools on the market."
+    },
+    "benefit2": {
+      "title": "Collaborative Culture",
+      "description": "An environment where all voices are heard and respected."
+    },
+    "benefit3": {
+      "title": "Work-Life Balance",
+      "description": "We value your mental health and time away from work."
+    }
   },
   "contact": {
     "title": "Let's talk?",
     "subtitle": "Have a project in mind or want to learn more about our products? We're ready to listen to you.",
     "email": "Email",
+    "emailValue": "contato@vimesistemas.com",
     "location": "Location",
+    "locationValue": "Belo Horizonte, MG - Brazil",
+    "locationGlobal": "(We serve globally)",
     "socials": "Social Networks",
     "form": {
       "name": "Name",
+      "namePlaceholder": "Your name",
       "email": "Email",
+      "emailPlaceholder": "your@email.com",
       "subject": "Subject",
+      "selectSubject": "Select a subject",
       "message": "Message",
+      "messagePlaceholder": "How can we help?",
       "submit": "Send Message",
       "newProject": "New Project",
       "productQuestion": "Product Question",
-      "careers": "Careers / Jobs",
+      "careersVacancies": "Careers / Jobs",
       "other": "Other"
     }
   },

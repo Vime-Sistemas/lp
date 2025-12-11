@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Mail, MapPin, MessageSquare } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function Contato() {
+  const { t } = useTranslation();
   return (
     <div className="min-h-screen bg-background pt-24 pb-16">
       <div className="container mx-auto px-4">
@@ -15,10 +17,10 @@ export default function Contato() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 md:mb-6">
-              Vamos conversar?
+              {t('contact.title')}
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 md:mb-12">
-              Tem um projeto em mente ou quer saber mais sobre nossos produtos? Estamos prontos para ouvir você.
+              {t('contact.subtitle')}
             </p>
 
             <div className="space-y-6 md:space-y-8">
@@ -27,8 +29,8 @@ export default function Contato() {
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-medium mb-1">Email</h3>
-                  <p className="text-muted-foreground text-sm md:text-base">contato@vimesistemas.com</p>
+                  <h3 className="font-medium mb-1">{t('contact.email')}</h3>
+                  <p className="text-muted-foreground text-sm md:text-base">{t('contact.emailValue')}</p>
                 </div>
               </div>
               
@@ -37,9 +39,9 @@ export default function Contato() {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-medium mb-1">Localização</h3>
-                  <p className="text-muted-foreground text-sm md:text-base">Belo Horizonte, MG - Brasil</p>
-                  <p className="text-xs md:text-sm text-muted-foreground mt-1">(Atendemos globalmente)</p>
+                  <h3 className="font-medium mb-1">{t('contact.location')}</h3>
+                  <p className="text-muted-foreground text-sm md:text-base">{t('contact.locationValue')}</p>
+                  <p className="text-xs md:text-sm text-muted-foreground mt-1">{t('contact.locationGlobal')}</p>
                 </div>
               </div>
 
@@ -48,7 +50,7 @@ export default function Contato() {
                   <MessageSquare className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-medium mb-1">Redes Sociais</h3>
+                  <h3 className="font-medium mb-1">{t('contact.socials')}</h3>
                   <div className="flex gap-4 text-muted-foreground text-sm md:text-base">
                     <a href="#" className="hover:text-foreground transition-colors">LinkedIn</a>
                     <a href="#" className="hover:text-foreground transition-colors">Instagram</a>
@@ -69,57 +71,57 @@ export default function Contato() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                    Nome
+                    {t('contact.form.name')}
                   </label>
                   <input
                     type="text"
                     id="name"
                     className="flex h-10 md:h-12 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                    placeholder="Seu nome"
+                    placeholder={t('contact.form.namePlaceholder')}
                   />
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                    Email
+                    {t('contact.form.email')}
                   </label>
                   <input
                     type="email"
                     id="email"
                     className="flex h-10 md:h-12 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                    placeholder="seu@email.com"
+                    placeholder={t('contact.form.emailPlaceholder')}
                   />
                 </div>
               </div>
 
               <div className="space-y-2">
                 <label htmlFor="subject" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                  Assunto
+                  {t('contact.form.subject')}
                 </label>
                 <select
                   id="subject"
                   className="flex h-10 md:h-12 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                 >
-                  <option value="">Selecione um assunto</option>
-                  <option value="projeto">Novo Projeto</option>
-                  <option value="produtos">Dúvida sobre Produtos</option>
-                  <option value="carreiras">Carreiras / Vagas</option>
-                  <option value="outro">Outro</option>
+                  <option value="">{t('contact.form.selectSubject')}</option>
+                  <option value="projeto">{t('contact.form.newProject')}</option>
+                  <option value="produtos">{t('contact.form.productQuestion')}</option>
+                  <option value="carreiras">{t('contact.form.careersVacancies')}</option>
+                  <option value="outro">{t('contact.form.other')}</option>
                 </select>
               </div>
 
               <div className="space-y-2">
                 <label htmlFor="message" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                  Mensagem
+                  {t('contact.form.message')}
                 </label>
                 <textarea
                   id="message"
                   className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 resize-y"
-                  placeholder="Como podemos ajudar?"
+                  placeholder={t('contact.form.messagePlaceholder')}
                 />
               </div>
 
               <Button type="submit" className="w-full rounded-full h-12 text-base">
-                Enviar Mensagem
+                {t('contact.form.submit')}
               </Button>
             </form>
           </motion.div>
