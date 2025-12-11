@@ -38,7 +38,7 @@ export default function Contato() {
                 </div>
                 <div>
                   <h3 className="font-medium mb-1">Localização</h3>
-                  <p className="text-muted-foreground">São Paulo, SP - Brasil</p>
+                  <p className="text-muted-foreground">Belo Horizonte, MG - Brasil</p>
                   <p className="text-sm text-muted-foreground mt-1">(Atendemos globalmente)</p>
                 </div>
               </div>
@@ -52,7 +52,6 @@ export default function Contato() {
                   <div className="flex gap-4 text-muted-foreground">
                     <a href="#" className="hover:text-foreground transition-colors">LinkedIn</a>
                     <a href="#" className="hover:text-foreground transition-colors">Instagram</a>
-                    <a href="#" className="hover:text-foreground transition-colors">Twitter</a>
                   </div>
                 </div>
               </div>

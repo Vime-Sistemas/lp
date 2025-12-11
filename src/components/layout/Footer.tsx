@@ -10,7 +10,7 @@ export function Footer() {
               Vime
             </Link>
             <p className="text-muted-foreground text-sm max-w-xs">
-              Criando o futuro do software com design invisível e engenharia robusta.
+              Soluções em Tecnologia.
             </p>
           </div>
           

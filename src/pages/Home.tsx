@@ -34,9 +34,9 @@ export default function Home() {
             }}
             className="text-xl md:text-3xl text-muted-foreground font-light tracking-tight max-w-2xl mx-auto leading-relaxed"
           >
-            Design invisível. Engenharia robusta.
+            Transformamos a sua necessidade
             <br />
-            Software que simplesmente funciona.
+            em solução tecnológica.
           </motion.p>
           
           <motion.div 
@@ -97,8 +97,8 @@ export default function Home() {
                </div>
             </div>
             <div>
-              <h3 className="text-xl font-medium mb-2">AI Development</h3>
-              <p className="text-muted-foreground text-sm">Soluções de IA personalizadas que transformam operações.</p>
+              <h3 className="text-xl font-medium mb-2">Integrações</h3>
+              <p className="text-muted-foreground text-sm">Soluções de integrações que mudam o nível.</p>
             </div>
           </motion.div>
 
@@ -194,8 +194,8 @@ export default function Home() {
                </div>
             </div>
             <div>
-              <h3 className="text-xl font-medium mb-2">Fractional CTO</h3>
-              <p className="text-muted-foreground text-sm">Liderança técnica estratégica.</p>
+              <h3 className="text-xl font-medium mb-2">Segurança</h3>
+              <p className="text-muted-foreground text-sm">Foco máximo em segurança e confiabilidade.</p>
             </div>
           </motion.div>
 

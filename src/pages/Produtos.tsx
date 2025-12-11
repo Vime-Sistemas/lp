@@ -30,7 +30,7 @@ const products = [
   },
   {
     id: "sharepoint",
-    title: "Integrações SharePoint",
+    title: "Integrações",
     category: "Enterprise",
     description: "Otimizamos fluxos empresariais complexos integrando softwares robustos como SharePoint. Transformamos ferramentas corporativas em soluções ágeis.",
     icon: <Share2 className="w-8 h-8" />,
