@@ -11,7 +11,8 @@ const products = [
     categoryKey: "products.advisorSync.category",
     descriptionKey: "products.advisorSync.description",
     icon: <BarChart3 className="w-8 h-8" />,
-    highlight: true
+    highlight: true,
+    image: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80&sat=-100"
   },
   {
     id: "broker-workspace",
@@ -19,7 +20,8 @@ const products = [
     categoryKey: "products.brokerWorkspace.category",
     descriptionKey: "products.brokerWorkspace.description",
     icon: <Briefcase className="w-8 h-8" />,
-    highlight: false
+    highlight: false,
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80&sat=-100"
   },
   {
     id: "cerebro-financas",
@@ -27,7 +29,8 @@ const products = [
     categoryKey: "products.cerebroFinancas.category",
     descriptionKey: "products.cerebroFinancas.description",
     icon: <Sparkles className="w-8 h-8" />,
-    highlight: false
+    highlight: false,
+    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80&sat=-100"
   },
   {
     id: "sharepoint",
@@ -35,7 +38,8 @@ const products = [
     categoryKey: "products.integrations.category",
     descriptionKey: "products.integrations.description",
     icon: <Share2 className="w-8 h-8" />,
-    highlight: false
+    highlight: false,
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2000&q=80&sat=-100"
   }
 ];
 
@@ -44,20 +48,51 @@ export default function Produtos() {
   return (
     <div className="min-h-screen bg-background pt-24 pb-16">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 mb-24 text-center">
+      <section className="relative mb-20 overflow-hidden">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="max-w-3xl mx-auto"
-        >
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-            {t('products.title')}
-          </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            {t('products.subtitle')}
-          </p>
-        </motion.div>
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.65) 100%), url(https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2000&q=80&sat=-100)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            filter: "grayscale(1)",
+          }}
+        />
+        <div className="container mx-auto px-4 py-20 md:py-28 relative">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="max-w-4xl text-center mx-auto text-white space-y-6"
+          >
+            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] bg-white/10 border border-white/30 rounded-full px-4 py-2">
+              <span>{t('products.title')}</span>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-semibold tracking-tight leading-tight">
+              {t('products.heroHeading', { defaultValue: 'Produtos assinados para quem exige performance, controle e design.' })}
+            </h1>
+            <p className="text-lg md:text-xl text-white/80 leading-relaxed">
+              {t('products.subtitle')}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Link to="/solucoes">
+                <Button size="lg" className="rounded-full px-6 sm:px-8 h-12 text-base font-medium bg-white text-black hover:bg-white/90">
+                  {t('products.primaryCta', { defaultValue: 'Explorar soluções' })}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+              <Link to="/contato">
+                <Button variant="ghost" size="lg" className="rounded-full px-6 sm:px-8 h-12 text-base font-medium border border-white/40 text-white hover:bg-white/10">
+                  {t('products.secondaryCta', { defaultValue: 'Falar com o time' })}
+                </Button>
+              </Link>
+            </div>
+          </motion.div>
+        </div>
       </section>
 
       {/* Products Grid */}
@@ -70,32 +105,45 @@ export default function Produtos() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`group relative overflow-hidden rounded-3xl border bg-card p-6 md:p-12 flex flex-col justify-between ${
-                product.highlight ? "md:col-span-2 bg-secondary/30" : ""
+              className={`group relative overflow-hidden rounded-3xl border bg-card p-0 flex flex-col justify-between ${
+                product.highlight ? "md:col-span-2" : ""
               }`}
             >
-              <div className="relative z-10 flex flex-col h-full">
-                <div className="mb-6 md:mb-8 flex items-center justify-between">
-                  <div className="p-3 bg-background rounded-xl border shadow-sm">
+              <div
+                className="absolute inset-0"
+                style={{
+                  backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.7) 70%), url(${product.image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  filter: "grayscale(1)",
+                  transform: "scale(1.02)",
+                }}
+              />
+
+              <div className="relative z-10 flex flex-col h-full p-6 md:p-12 text-white gap-8">
+                <div className="flex items-center justify-between gap-4">
+                  <div className="p-3 bg-white/10 rounded-xl border border-white/20 shadow-sm">
                     {product.icon}
                   </div>
-                  <span className="text-[10px] md:text-xs font-medium uppercase tracking-wider text-muted-foreground border px-2 py-1 md:px-3 md:py-1 rounded-full bg-background/50 backdrop-blur-sm">
+                  <span className="text-[10px] md:text-xs font-medium uppercase tracking-[0.2em] text-white/80 border border-white/30 px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm">
                     {t(product.categoryKey)}
                   </span>
                 </div>
-                
-                <div className="mt-auto">
-                  <h3 className={`font-semibold tracking-tight mb-3 ${product.highlight ? "text-2xl md:text-4xl" : "text-xl md:text-2xl"}`}>
+
+                <div className="space-y-3">
+                  <h3 className={`font-semibold tracking-tight ${product.highlight ? "text-3xl md:text-4xl" : "text-2xl"}`}>
                     {t(product.titleKey)}
                   </h3>
-                  <p className={`text-muted-foreground leading-relaxed ${product.highlight ? "text-base md:text-lg max-w-2xl" : "text-sm md:text-base"}`}>
+                  <p className={`leading-relaxed text-white/80 ${product.highlight ? "text-lg md:text-xl max-w-2xl" : "text-base"}`}>
                     {t(product.descriptionKey)}
                   </p>
                 </div>
-              </div>
 
-              {/* Decorative Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-secondary/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="flex items-center gap-2 text-sm text-white/80">
+                  <span>{t('products.learnMore', { defaultValue: 'Ver detalhes' })}</span>
+                  <ArrowRight className="h-4 w-4" />
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
